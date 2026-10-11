@@ -61,7 +61,7 @@ Brew: 95C, 1 tsp per 250ml, 5-7 mins.
 URL: theabotanicals.com/pages/the-calm-blend
 
 FOCUS NO.02 - for clear-headed, intentional moments and deep work.
-Botanicals: Peppermint, Hibiscus, Rosehip, Ginseng, Orange Peel, Rosemary (six herbs). Do not share percentages or proportions.
+Botanicals: Peppermint, Spearmint, Hibiscus, Rosehip, Ginseng, Orange Peel, Rosemary (seven herbs). Do not share percentages or proportions.
 Brew: 89C, 1 tsp per 250ml, 5-7 mins.
 URL: theabotanicals.com/pages/the-focus-blend
 
