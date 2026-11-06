@@ -1,0 +1,41 @@
+{%- comment -%}
+  THEA free delivery nudge.
+  Threshold matches the General profile free Standard rate (£26).
+  Subscription lines and the Taster Pack ship free on their own profiles, so they are excluded.
+{%- endcomment -%}
+{%- liquid
+  assign thea_threshold = 2600
+  assign thea_has_sub = false
+  assign thea_oneoff = 0
+  for item in cart.items
+    if item.selling_plan_allocation or item.product.handle == 'taster-pack'
+      assign thea_has_sub = true
+    else
+      assign thea_oneoff = thea_oneoff | plus: item.final_line_price
+    endif
+  endfor
+  if thea_has_sub == false
+    assign thea_oneoff = cart.total_price
+  endif
+-%}
+{%- if thea_oneoff > 0 -%}
+  <div class="thea-dn" role="status">
+    {%- if thea_oneoff < thea_threshold -%}
+      {%- assign thea_gap = thea_threshold | minus: thea_oneoff -%}
+      {%- assign thea_pct = thea_oneoff | times: 100 | divided_by: thea_threshold -%}
+      <p class="thea-dn__msg">Add a second blend for free UK delivery</p>
+      <p class="thea-dn__sub">You're {{ thea_gap | money }} away &middot; <a href="{{ routes.all_products_collection_url }}" class="thea-dn__link">Choose a blend</a></p>
+      <div class="thea-dn__bar"><div class="thea-dn__fill" style="width:{{ thea_pct }}%;"></div></div>
+    {%- else -%}
+      <p class="thea-dn__msg">&#10003; You've unlocked free UK delivery</p>
+    {%- endif -%}
+  </div>
+  <style>
+    .thea-dn{margin:0 0 14px;padding:10px 12px;border:1px solid #d5d8d5;border-radius:6px;background:#f6f3ec;text-align:center;font-family:var(--font-body-family);color:#2D3A2F;}
+    .thea-dn__msg{margin:0;font-size:1.4rem;font-weight:600;letter-spacing:0.02em;line-height:1.5;}
+    .thea-dn__sub{margin:2px 0 0;font-size:1.25rem;line-height:1.5;}
+    .thea-dn__link{color:inherit;text-decoration:underline;}
+    .thea-dn__bar{margin:8px 0 2px;height:6px;background:#dcdfd8;border-radius:3px;overflow:hidden;}
+    .thea-dn__fill{height:100%;background:#2D3A2F;}
+  </style>
+{%- endif -%}
