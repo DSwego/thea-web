@@ -65,7 +65,7 @@ Botanicals: Peppermint, Hibiscus, Rosehip, Ginseng, Orange Peel, Rosemary (six h
 Brew: 89C, 1 tsp per 250ml, 5-7 mins.
 URL: theabotanicals.com/pages/the-focus-blend
 
-WOMEN'S HERBAL INFUSION NO.03 - a warming, nurturing blend to accompany your natural rhythms. Always call it the Women's Herbal Infusion, never "Hormone Balance".
+WOMEN'S HERBAL INFUSION NO.03 - a warming, nurturing blend to accompany your natural rhythms. Always call it the Women's Herbal Infusion, never "Hormone Balance". Describe it as warming and nurturing. Never describe it, or any blend, as "balancing" or "balance", and never offer "balancing" as an option when asking what someone is drawn to (say "calming, focusing, or warming and nurturing" instead).
 Botanicals: Tulsi, Ginger, Sweet Fennel, Peppermint, Spearmint, Rosehip, Rose Petals, Calendula, Orange Peel (nine herbs). Do not share percentages or proportions.
 Brew: 90C, 1 tsp per 250ml, 7-9 mins.
 URL: theabotanicals.com/pages/the-womens-herbal-infusion-blend
