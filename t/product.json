@@ -1,0 +1,192 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "body"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "custom_liquid_trust_line": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{%- if product.handle == 'the-ritual-trio' or product.handle == 'botanist-duo' -%}{%- assign thea_single = all_products['calm-tea-blend'].price -%}{%- if product.handle == 'the-ritual-trio' -%}{%- assign thea_n = 3 -%}{%- else -%}{%- assign thea_n = 2 -%}{%- endif -%}{%- assign thea_save = thea_single | times: thea_n | minus: product.price -%}{%- if thea_save >= 100 -%}<p style=\"margin:-6px 0 12px;font-family:var(--font-body-family);font-size:1.4rem;color:#2D3A2F;\"><span style=\"display:inline-block;background:#3f5147;color:#fff;border-radius:4px;padding:3px 9px;font-weight:600;letter-spacing:0.03em;\">Save {{ thea_save | money }}</span>&nbsp; vs buying the {% if thea_n == 3 %}three{% else %}two{% endif %} blends separately</p>{%- endif -%}{%- endif -%}<p style=\"margin:-4px 0 14px;font-family:var(--font-body-family);font-size:1.3rem;letter-spacing:0.03em;color:#2D3A2F;line-height:1.7;\">{% if product.price >= 2600 or product.handle == 'taster-pack' %}&#10003; Free UK delivery included{% else %}&#10003; Free UK delivery over &pound;26 &middot; add a second blend to qualify{% endif %}<br>&#10003; <a href=\"{{ shop.refund_policy.url }}\" style=\"color:inherit;text-decoration:underline;text-underline-offset:2px;\">30-day money-back guarantee</a>, even if opened</p>"
+          }
+        },
+        "custom_liquid_secret_garden_note": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if product.handle == 'botanist-duo' or product.handle == 'the-ritual-trio' or product.handle == 'botanist-single' %}\n  <p class=\"caption-large\" style=\"margin-top: -4px; margin-bottom: 8px; opacity: 0.85;\">\n    Includes full access to the Secret Garden — guided meditations, yoga, and wellness content.\n  </p>\n{% endif %}"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "custom_liquid_steeper": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div style=\"display:flex;align-items:center;gap:12px;margin:16px 0;padding:12px;border:1px solid rgba(45,58,47,0.2);border-radius:6px;\">\n  <img src=\"https://cdn.shopify.com/s/files/1/1001/3619/0287/files/steeper_image.png?v=1785658157\" alt=\"THEA Tea Steeper\" style=\"width:56px;height:56px;object-fit:cover;border-radius:4px;flex-shrink:0;\">\n  <label style=\"display:flex;align-items:center;gap:10px;font-family:var(--font-body-family);font-size:1.4rem;cursor:pointer;\">\n    <input type=\"checkbox\" id=\"thea-steeper-toggle\" style=\"width:18px;height:18px;\" {% if cart.attributes['Complimentary Steeper'] == 'Yes' %}checked{% endif %}>\n    Add a complimentary tea steeper (first order only)\n  </label>\n</div>\n<script>\n(function(){\n  var cb = document.getElementById('thea-steeper-toggle');\n  if(!cb) return;\n  cb.addEventListener('change', function(){\n    fetch('/cart/update.js', {\n      method: 'POST',\n      headers: {'Content-Type':'application/json'},\n      body: JSON.stringify({ attributes: { 'Complimentary Steeper': cb.checked ? 'Yes' : '' } })\n    });\n  });\n})();\n</script>"
+          }
+        },
+        "subscriptions_app_block_RK9yFb": {
+          "type": "shopify://apps/subscriptions/blocks/app-block/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
+          "settings": {
+            "widget_style": "card",
+            "widget_style_card_selector": "radio_button",
+            "subscription_policy_url": "",
+            "color_text_body": "#6d7175",
+            "dividers_color": "#8f8d8d",
+            "background_color": "#ffffff",
+            "border_thickness": 1,
+            "border_radius": 0,
+            "product": "{{product}}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "collapsible_tab_pack_size": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Pack Size & Servings",
+            "icon": "box",
+            "content": "<p>Each pouch contains 75g of loose leaf blend — approximately 30 servings, depending on how strong you brew your cup.</p>"
+          }
+        },
+        "collapsible_tab_brewing": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How to Brew",
+            "icon": "stopwatch",
+            "content": "<p>Use one heaped teaspoon (2–3g) per 250ml of hot water, never boiling, as boiling water scorches the leaves. Calm Tea No.01: 95°C. Women's Herbal Infusion No.03: 90°C. Focus Tea No.02: 85°C. Steep, covered, for 5–9 minutes — shorter for a lighter cup, longer for a deeper, more robust one. Strain and enjoy.</p>"
+          }
+        },
+        "collapsible_tab_faq": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Common Questions",
+            "icon": "question_mark",
+            "content": "<p><strong>Is it caffeine-free?</strong> Yes, every THEA blend is naturally caffeine-free.<br/><br/><strong>Are the herbs organic?</strong> Yes, all our herbs come from a certified organic supplier. The finished blends are not themselves certified organic.<br/><br/><strong>How do I access the Secret Garden?</strong> Scan the QR code on your pouch's ritual card to unlock your guided meditation.</p>"
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "custom_liquid_sticky_cart": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>\n  #thea-sticky-cart{position:fixed;left:0;right:0;bottom:0;z-index:40;background:#ffffff;border-top:1px solid rgba(0,0,0,0.1);box-shadow:0 -4px 16px rgba(0,0,0,0.08);padding:10px 16px;display:none;align-items:center;justify-content:space-between;gap:12px;transform:translateY(100%);transition:transform .25s ease;}\n  #thea-sticky-cart.thea-visible{transform:translateY(0);}\n  #thea-sticky-cart .thea-sc-info{display:flex;flex-direction:column;min-width:0;}\n  #thea-sticky-cart .thea-sc-title{font-size:1.2rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:180px;}\n  #thea-sticky-cart .thea-sc-price{font-size:1.3rem;opacity:.75;}\n  #thea-sticky-cart button{flex-shrink:0;padding:12px 22px;border-radius:6px;border:none;background:#2c332f;color:#fff;font-weight:600;font-size:1.3rem;cursor:pointer;}\n  @media screen and (min-width:750px){#thea-sticky-cart{display:none !important;}}\n  @media screen and (max-width:749px){#thea-sticky-cart{display:flex;}}\n</style>\n<div id=\"thea-sticky-cart\">\n  <div class=\"thea-sc-info\">\n    <span class=\"thea-sc-title\">{{ product.title }}</span>\n    <span class=\"thea-sc-price\">{{ product.selected_or_first_available_variant.price | money }}</span>\n  </div>\n  <button type=\"button\" id=\"thea-sticky-cart-btn\">Add to Cart</button>\n</div>\n<script>\n(function(){\n  var bar = document.getElementById('thea-sticky-cart');\n  var btn = document.getElementById('thea-sticky-cart-btn');\n  if(!bar || !btn) return;\n  var infoSection = document.querySelector('.product__info-container');\n  var realBtn = function(){\n    return document.querySelector('product-form [type=\"submit\"]') || document.querySelector('form[action*=\"/cart/add\"] [type=\"submit\"]');\n  };\n  btn.addEventListener('click', function(){\n    var rb = realBtn();\n    if(rb) rb.click();\n  });\n  if(infoSection && 'IntersectionObserver' in window){\n    var observer = new IntersectionObserver(function(entries){\n      entries.forEach(function(entry){\n        if(entry.isIntersecting){\n          bar.classList.remove('thea-visible');\n        } else if(entry.boundingClientRect.top < 0){\n          bar.classList.add('thea-visible');\n        } else {\n          bar.classList.remove('thea-visible');\n        }\n      });\n    }, { threshold: 0 });\n    observer.observe(infoSection);\n  }\n})();\n</script>"
+          }
+        },
+        "custom_liquid_reassurance": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>.thea-reassure .list-payment__item svg{width:3.8rem;height:2.4rem;display:block;}</style>\n<div class=\"thea-reassure\" style=\"margin:14px 0 6px;padding:14px 16px;border:1px solid rgba(45,58,47,0.18);border-radius:6px;font-family:var(--font-body-family);color:#2D3A2F;\">\n  <p style=\"margin:0;font-size:1.35rem;line-height:1.9;\">&#10003; Order before 1pm (Mon&ndash;Fri) for same-day dispatch<br>&#10003; Tracked UK delivery, usually 2&ndash;3 working days<br>&#10003; <a href=\"{{ shop.refund_policy.url }}\" style=\"color:inherit;text-decoration:underline;text-underline-offset:2px;\">30-day money-back guarantee</a></p>\n  {%- if shop.enabled_payment_types.size > 0 -%}\n  <ul class=\"list-payment\" role=\"list\" style=\"display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 0;padding:0;list-style:none;\">\n    {%- for type in shop.enabled_payment_types -%}<li class=\"list-payment__item\" style=\"margin:0;\">{{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>{%- endfor -%}\n  </ul>\n  <p style=\"margin:6px 0 0;font-size:1.15rem;opacity:0.7;\">Secure checkout</p>\n  {%- endif -%}\n</div>"
+          }
+        },
+        "custom_liquid_sub_heading": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{%- if product.selling_plan_groups.size > 0 -%}\n<div style=\"margin:18px 0 8px;\">\n  <p style=\"margin:0;font-family:var(--font-heading-family);font-size:1.9rem;line-height:1.3;\">Subscribe &amp; get exclusive content</p>\n  <p class=\"caption-large\" style=\"margin:4px 0 0;opacity:.85;\">Free UK delivery every month, plus subscriber-only meditations in The Secret Garden.</p>\n</div>\n{%- endif -%}"
+          }
+        }
+      },
+      "block_order": [
+        "text",
+        "title",
+        "price",
+        "custom_liquid_trust_line",
+        "custom_liquid_secret_garden_note",
+        "variant_picker",
+        "quantity_selector",
+        "custom_liquid_steeper",
+        "custom_liquid_sub_heading",
+        "subscriptions_app_block_RK9yFb",
+        "buy_buttons",
+        "custom_liquid_reassurance",
+        "description",
+        "collapsible_tab_pack_size",
+        "collapsible_tab_brewing",
+        "collapsible_tab_faq",
+        "share",
+        "custom_liquid_sticky_cart"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "large",
+        "constrain_to_viewport": false,
+        "media_fit": "cover",
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 16
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 68
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products"
+  ]
+}
